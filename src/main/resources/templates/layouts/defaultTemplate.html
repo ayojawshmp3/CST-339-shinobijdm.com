@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- STLYING -->
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>CST-339 Spring Boot Activity Application</title>
+		
+		<!-- Import / Access Bootstrap -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+		<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.css">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="//cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.js"></script>
+		<style type="text/css">.bs-example { margin: 20px; }</style>
+	</head>
+	
+	<body>
+		<div align="center">
+			<!--  Insert Header Fragment -->
+			<div th:replace="~{layouts/common :: header}">Header</div>
+			
+			<!-- Add an image -->
+			<img th:src="@{/images/sjdm.jpg}" width="250" height=auto/><br/><br/> 
+			
+			<!-- Main Body Content -->
+			<!-- Accessed in home.html via 'content' -->
+			<section layout:fragment="content">
+				<p style="color:red">Upgrade your wardrobe with JDM & anime apparel!</p>
+			</section>
+			
+			<!-- Insert Footer Fragment -->
+			<div th:replace="~{layouts/common :: footer}">Footer</div>
+		</div>
+	</body>
+</html>

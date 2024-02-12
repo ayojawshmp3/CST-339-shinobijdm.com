@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<!-- home.html accessing the default template via layout:decorate/default template -->
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="layouts/defaultTemplate">
+	<head>
+		<meta charset="UTF-8">
+		<!-- Tab Name -->
+		<title>Home</title>
+	</head>
+	<body style="background-color:black">
+		<!-- Common Template Fragment that displays the body content -->
+		<!-- This line is only accessing a portion of the template.html that displays the body of the home 
+		web page via 'content' -->
+		<div layout:fragment="~{content}"></div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<!-- STLYING -->
+<html xmlns:th="http:www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+	<head>
+		<meta charset="UTF-8">
+		<title>Common Template</title>
+	</head>
+	<body>
+	<div class="backgroundDiv" th:fragment="header"></div>
+	
+		<!-- Common Header Fragment. -->
+		<div th:fragment="header">
+			<div align="center">
+				<h1 style="color:red; font-size: 65px;">SHINOBIJDM</h1>
+			</div>
+			
+			<div class="bs-example">
+			
+			<!-- Define a navigation bar -->
+				<nav class="navbar navbar-default">
+				
+					<!-- Elements of the navigation bar -->
+					<div class="navbar-header">
+						<!-- Redirects back to home page when clicked (/home/)-->
+						<a href="/home/" class="navbar-brand" style="color:black">SJDM</a>
+					</div>
+					
+					<!-- Collection of navigation links and other content for toggling. -->
+					<div id="navbarCollapse" class="collapse navbar-collapse">
+					
+						<!-- Left Side of navigation bar -->
+						<ul class="nav navbar-nav">
+							<li><a href="https://youtu.be/dQw4w9WgXcQ?si=eBj7JQ4CB0MxCKqY" target="_blank" style="color:black">Men's (Unfinished)</a></li>
+							<li><a href="https://youtu.be/dQw4w9WgXcQ?si=eBj7JQ4CB0MxCKqY" target="_blank" style="color:black">Women's (Unfinished)</a></li>
+							<li><a href="https://youtu.be/dQw4w9WgXcQ?si=eBj7JQ4CB0MxCKqY" target="_blank" style="color:black">Accessories (Unfinished)</a></li>
+						</ul>
+						
+						<!-- Right Side of navigation bar -->
+						<ul class="nav navbar-nav navbar-right">
+							<li><a th:href="@{register}" target="_blank" style="color:black">Register</a></li>
+							<li><a th:href="@{login}" target="_blank" style="color:black">Login</a></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<!--  Common Footer Fragment -->
+		<div th:fragment="footer"
+			><h5 style="color:white; text-align: center;position: fixed;bottom: 0;width: 100%;">Copyright SHINOBIJDM ©</h5>
+		</div>
+	</body>
+</html>
